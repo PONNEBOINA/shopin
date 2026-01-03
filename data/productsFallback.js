@@ -5,7 +5,7 @@ const productsFallback = [
     description: 'Premium full-grain leather jacket with timeless styling.',
     category: "men's clothing",
     price: 149.99,
-    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.7, count: 210 },
   },
   {
@@ -14,7 +14,7 @@ const productsFallback = [
     description: 'Stainless steel watch with sapphire crystal and leather strap.',
     category: 'jewelery',
     price: 89.5,
-    image: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
+    image: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.5, count: 150 },
   },
   {
@@ -23,7 +23,7 @@ const productsFallback = [
     description: 'Wireless over-ear headphones with 30-hour battery life.',
     category: 'electronics',
     price: 199.99,
-    image: 'https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg',
+    image: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.8, count: 320 },
   },
   {
@@ -32,7 +32,7 @@ const productsFallback = [
     description: 'Elegant gold-plated bracelet with adjustable clasp.',
     category: 'jewelery',
     price: 64.99,
-    image: 'https://fakestoreapi.com/img/71yaIM0s8hL._AC_UL640_QL65_ML3_.jpg',
+    image: 'https://images.unsplash.com/photo-1518544801958-efcbf8a7ec10?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.2, count: 85 },
   },
   {
@@ -41,7 +41,7 @@ const productsFallback = [
     description: 'Spacious tote bag crafted from premium vegan leather.',
     category: "women's clothing",
     price: 129.0,
-    image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    image: 'https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.6, count: 260 },
   },
   {
@@ -50,7 +50,7 @@ const productsFallback = [
     description: 'Track heart rate, sleep, and workouts with water resistance.',
     category: 'electronics',
     price: 79.99,
-    image: 'https://fakestoreapi.com/img/71MkUdKc1OL._AC_SL1500_.jpg',
+    image: 'https://images.unsplash.com/photo-1517059224940-d4af9eec41e5?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.4, count: 190 },
   },
   {
@@ -59,7 +59,7 @@ const productsFallback = [
     description: 'Hand-rolled silk scarf featuring abstract artwork.',
     category: "women's clothing",
     price: 54.5,
-    image: 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.1, count: 75 },
   },
   {
@@ -68,7 +68,7 @@ const productsFallback = [
     description: 'Breathable knit sneakers with responsive cushioning.',
     category: "men's clothing",
     price: 99.99,
-    image: 'https://fakestoreapi.com/img/81XH0e8fefL._AC_SL1500_.jpg',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.3, count: 140 },
   },
   {
@@ -77,7 +77,7 @@ const productsFallback = [
     description: 'Waterproof action camera with stabilization and dual screens.',
     category: 'electronics',
     price: 249.0,
-    image: 'https://fakestoreapi.com/img/81fY8d3Iv1L._AC_SX679_.jpg',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.6, count: 110 },
   },
   {
@@ -86,7 +86,7 @@ const productsFallback = [
     description: 'Sterling silver earrings with cultured freshwater pearls.',
     category: 'jewelery',
     price: 72.25,
-    image: 'https://fakestoreapi.com/img/71yaIM0s8hL._AC_UL640_QL65_ML3_.jpg',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.5, count: 95 },
   },
   {
@@ -95,7 +95,7 @@ const productsFallback = [
     description: 'Chunky knit sweater with relaxed fit and ribbed cuffs.',
     category: "women's clothing",
     price: 84.0,
-    image: 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
+    image: 'https://images.unsplash.com/photo-1518544803515-69b1a3f0c5cc?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.4, count: 180 },
   },
   {
@@ -104,7 +104,7 @@ const productsFallback = [
     description: 'Vintage wash denim jacket with brass hardware and lining.',
     category: "men's clothing",
     price: 119.99,
-    image: 'https://fakestoreapi.com/img/71X6mnF9LTL._AC_UL1500_.jpg',
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80',
     rating: { rate: 4.7, count: 205 },
   },
 ]
