@@ -1,10 +1,14 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import ProductGrid from '../components/ProductGrid'
 import Footer from '../components/Footer'
-import WishlistModal from '../components/WishlistModal'
 import { useState, useEffect } from 'react'
+
+const WishlistModal = dynamic(() => import('../components/WishlistModal'), {
+  ssr: false
+})
 
 export default function Home({ products }) {
   const [selectedCategory, setSelectedCategory] = useState('all')
