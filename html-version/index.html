@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Products Store - Shop Quality Items Online</title>
+  <meta name="description" content="Discover our curated collection of premium products including electronics, jewelry, and fashion. Shop quality items with fast shipping and great prices.">
+  <meta property="og:title" content="Premium Products Store">
+  <meta property="og:description" content="Shop quality products online">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Premium Products Store",
+    "description": "Online store for premium products"
+  }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="navbar-logo">
+        <span class="logo-text">LOGO</span>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#stories">STORIES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+      <div class="navbar-icons">
+        <button aria-label="Search" id="search-toggle">🔍</button>
+        <button 
+          aria-label="Wishlist" 
+          class="wishlist-icon"
+          id="wishlist-btn"
+        >
+          ❤️
+          <span class="wishlist-badge" id="wishlist-count" style="display: none;">0</span>
+        </button>
+        <button aria-label="Shopping bag">🛍️</button>
+        <button aria-label="User account">👤</button>
+        <button aria-label="Language">ENG</button>
+      </div>
+    </div>
+    <div class="search-bar" id="search-bar" style="display: none;">
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search products..."
+          id="search-input"
+          class="search-input"
+        />
+        <button class="search-clear" id="search-clear" style="display: none;" aria-label="Clear search">✕</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1 class="hero-title">DISCOVER OUR PRODUCTS</h1>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. 
+          Dolor integer scelerisque nibh amet mi ut elementum dolor.
+        </p>
+      </div>
+    </section>
+
+    <div class="content-wrapper" id="content-wrapper">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-header">
+            <input type="checkbox" id="customizable">
+            <label for="customizable">CUSTOMIZABLE</label>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <details open>
+            <summary class="sidebar-title">IDEAL FOR</summary>
+            <div class="sidebar-content">
+              <label class="filter-option" style="cursor: pointer;" onclick="document.getElementById('clear-filters').click()">All</label>
+              <div class="filter-options">
+                <label>
+                  <input type="checkbox" class="ideal-for-checkbox" value="Men">
+                  <span>Men</span>
+                </label>
+                <label>
+                  <input type="checkbox" class="ideal-for-checkbox" value="Women">
+                  <span>Women</span>
+                </label>
+                <label>
+                  <input type="checkbox" class="ideal-for-checkbox" value="Electronics">
+                  <span>Electronics</span>
+                </label>
+                <label>
+                  <input type="checkbox" class="ideal-for-checkbox" value="Jewelry">
+                  <span>Jewelry</span>
+                </label>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <button class="clear-filters-btn" id="clear-filters">
+            Clear All Filters
+          </button>
+        </div>
+      </aside>
+
+      <section class="products-section">
+        <div class="products-header">
+          <div class="products-info">
+            <h2 class="products-count" id="item-count">0 ITEMS</h2>
+            <button class="filter-toggle" id="filter-toggle">
+              <span class="filter-icon">◀</span> HIDE FILTER
+            </button>
+          </div>
+          <div class="products-sort">
+            <select class="sort-select" id="sort-select">
+              <option value="recommended">RECOMMENDED</option>
+              <option value="newest">NEWEST FIRST</option>
+              <option value="popular">POPULAR</option>
+              <option value="price-high">PRICE: HIGH TO LOW</option>
+              <option value="price-low">PRICE: LOW TO HIGH</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="products-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">BE THE FIRST TO KNOW</h3>
+          <p class="footer-text">Sign up for updates from mettā muse.</p>
+          <div class="footer-subscribe">
+            <input type="email" placeholder="Enter your e-mail..." aria-label="Email address">
+            <button aria-label="Subscribe">SUBSCRIBE</button>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">CONTACT US</h3>
+          <p class="footer-text">+44 221 133 5360</p>
+          <p class="footer-text">customercare@mettamuse.com</p>
+          <h3 class="footer-title footer-title-spacing">CURRENCY</h3>
+          <div class="currency-selector">
+            <span class="currency-flag">🇺🇸</span>
+            <span class="currency-code">USD</span>
+          </div>
+          <p class="footer-note">
+            Transactions will be completed in Euros and a currency reference is available on hover.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-links-container">
+        <div class="footer-column">
+          <h4>mettā muse</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#artisans">Artisans</a></li>
+            <li><a href="#boutiques">Boutiques</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#compliance">EU Compliances Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="#orders">Orders & Shipping</a></li>
+            <li><a href="#join">Join/Login as a Seller</a></li>
+            <li><a href="#payment">Payment & Pricing</a></li>
+            <li><a href="#returns">Return & Refunds</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>FOLLOW US</h4>
+          <div class="social-icons">
+            <a href="#instagram" aria-label="Instagram" class="social-icon">📷</a>
+            <a href="#linkedin" aria-label="LinkedIn" class="social-icon">💼</a>
+          </div>
+          <h4 class="payment-title">mettā muse ACCEPTS</h4>
+          <div class="payment-icons">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%23fff' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-size='10' font-family='Arial'%3EGPay%3C/text%3E%3C/svg%3E" alt="Google Pay">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%23fff' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-size='10' font-family='Arial'%3EMCard%3C/text%3E%3C/svg%3E" alt="Mastercard">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%23fff' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-size='10' font-family='Arial'%3EPayPal%3C/text%3E%3C/svg%3E" alt="PayPal">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%23fff' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-size='10' font-family='Arial'%3EAmex%3C/text%3E%3C/svg%3E" alt="American Express">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%23fff' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-size='10' font-family='Arial'%3EAPay%3C/text%3E%3C/svg%3E" alt="Apple Pay">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect fill='%235469d4' width='40' height='25' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-size='9' font-family='Arial' font-weight='bold'%3EoPay%3C/text%3E%3C/svg%3E" alt="O.Pay">
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>Copyright © 2023 mettamuse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Wishlist Modal -->
+  <div class="modal-overlay" id="wishlist-modal" style="display: none;">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2 class="modal-title" id="wishlist-title">My Wishlist</h2>
+        <button class="modal-close" id="close-wishlist" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="wishlist-body">
+        <!-- Wishlist items will be inserted here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
