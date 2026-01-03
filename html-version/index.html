@@ -143,9 +143,12 @@
         <div class="footer-section">
           <h3 class="footer-title">BE THE FIRST TO KNOW</h3>
           <p class="footer-text">Sign up for updates from mettā muse.</p>
-          <div class="footer-subscribe">
-            <input type="email" placeholder="Enter your e-mail..." aria-label="Email address">
-            <button aria-label="Subscribe">SUBSCRIBE</button>
+          <form class="footer-subscribe" id="subscribe-form">
+            <input type="email" placeholder="Enter your e-mail..." aria-label="Email address" id="subscribe-email" required>
+            <button type="submit" aria-label="Subscribe">SUBSCRIBE</button>
+          </form>
+          <div class="subscribe-success" id="subscribe-success" style="display: none;">
+            ✓ You're subscribed! Thank you for joining us.
           </div>
         </div>
         <div class="footer-section">

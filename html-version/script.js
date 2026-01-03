@@ -288,7 +288,26 @@ function createProductCard(product) {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', fetchProducts);
+document.addEventListener('DOMContentLoaded', () => {
+  fetchProducts();
+  
+  // Subscribe form handler
+  document.getElementById('subscribe-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('subscribe-email').value;
+    const successMsg = document.getElementById('subscribe-success');
+    
+    if (email && email.includes('@')) {
+      successMsg.style.display = 'block';
+      document.getElementById('subscribe-email').value = '';
+      
+      // Hide after 5 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+    }
+  });
+});
 
 // Wishlist Modal Functions
 function showWishlistModal() {
