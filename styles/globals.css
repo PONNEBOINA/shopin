@@ -400,6 +400,111 @@ details[open] .sidebar-title::after {
   font-size: 0.7rem;
 }
 
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  color: var(--bg-primary);
+  margin-top: 4rem;
+  padding: 3rem 2rem 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.footer-newsletter h3 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.25rem;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-newsletter-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.footer-newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--bg-secondary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-links-section h4 {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-links-section a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links-section a:hover {
+  color: var(--bg-secondary);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--bg-secondary);
+}
+
 .products-sort {
   display: flex;
   align-items: center;
