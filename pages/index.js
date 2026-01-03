@@ -1,14 +1,9 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import ProductGrid from '../components/ProductGrid'
 import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
-
-const WishlistModal = dynamic(() => import('../components/WishlistModal'), {
-  ssr: false
-})
 
 export default function Home({ products }) {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -20,7 +15,6 @@ export default function Home({ products }) {
   const [showSidebar, setShowSidebar] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [wishlistCount, setWishlistCount] = useState(0)
-  const [showWishlist, setShowWishlist] = useState(false)
 
   // Update wishlist count on mount and when favorites change
   useEffect(() => {
@@ -146,12 +140,7 @@ export default function Home({ products }) {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         wishlistCount={wishlistCount}
-        onShowWishlist={() => setShowWishlist(true)}
-      />
-      <WishlistModal 
-        isOpen={showWishlist}
-        onClose={() => setShowWishlist(false)}
-        products={products}
+        onShowWishlist={() => alert('Wishlist feature - ' + wishlistCount + ' items saved!')}
       />
       <main className="main-container">
         <section className="hero-banner">
