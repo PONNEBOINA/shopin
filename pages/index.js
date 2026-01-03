@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import ProductGrid from '../components/ProductGrid'
 import Footer from '../components/Footer'
+import fallbackProducts from '../data/productsFallback'
 import { useState, useEffect } from 'react'
 
 export default function Home({ products }) {
@@ -178,37 +179,49 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps() {
+  let remoteProducts = []
+
   try {
-    // Fetch from FakeStore API
-    const res = await fetch('https://fakestoreapi.com/products')
-    const products = await res.json()
-    
-    // Add more products by duplicating with variations to simulate more inventory
-    const expandedProducts = [...products]
-    
-    // Add variations of existing products
-    products.forEach((product, index) => {
-      if (index < 10) { // Add 10 more variations
-        expandedProducts.push({
-          ...product,
-          id: products.length + index + 1,
-          title: `${product.title} - Premium Edition`,
-          price: (product.price * 1.2).toFixed(2)
-        })
-      }
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 7000)
+
+    const res = await fetch('https://fakestoreapi.com/products', {
+      signal: controller.signal,
+      cache: 'no-store',
     })
-    
-    return {
-      props: {
-        products: expandedProducts || []
-      }
+
+    clearTimeout(timeout)
+
+    if (!res.ok) {
+      throw new Error(`FakeStore API responded with ${res.status}`)
     }
+
+    const data = await res.json()
+    remoteProducts = Array.isArray(data) ? data : []
   } catch (error) {
-    console.error('Error fetching products:', error)
-    return {
-      props: {
-        products: []
-      }
-    }
+    console.error('Error fetching products, using fallback data:', error)
+  }
+
+  const baseProducts = remoteProducts.length ? remoteProducts : fallbackProducts
+  const expandedProducts = [...baseProducts]
+
+  baseProducts.slice(0, 10).forEach((product, index) => {
+    const priceValue =
+      typeof product.price === 'number'
+        ? product.price
+        : Number.parseFloat(product.price) || 0
+
+    expandedProducts.push({
+      ...product,
+      id: baseProducts.length + index + 1,
+      title: `${product.title} - Premium Edition`,
+      price: Number((priceValue * 1.2).toFixed(2)),
+    })
+  })
+
+  return {
+    props: {
+      products: expandedProducts,
+    },
   }
 }
