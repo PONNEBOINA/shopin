@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
+import Image from 'next/image'
 import ProductGrid from '../components/ProductGrid'
 import Footer from '../components/Footer'
 import fallbackProducts from '../data/productsFallback'
@@ -146,11 +147,23 @@ export default function Home({ products }) {
       <main className="main-container">
         <section className="hero-banner">
           <div className="hero-content">
-            <h1 className="hero-title">DISCOVER OUR PRODUCTS</h1>
-            <p className="hero-description">
-              Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. 
-              Dolor integer scelerisque nibh amet mi ut elementum dolor.
-            </p>
+            <div>
+              <h1 className="hero-title">DISCOVER OUR PRODUCTS</h1>
+              <p className="hero-description">
+                Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. 
+                Dolor integer scelerisque nibh amet mi ut elementum dolor.
+              </p>
+            </div>
+            <div className="hero-image-wrapper">
+              <Image
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                alt="Premium products display"
+                width={320}
+                height={320}
+                className="hero-image"
+                priority
+              />
+            </div>
           </div>
         </section>
         <div className={`content-wrapper ${!showSidebar ? 'sidebar-hidden' : ''}`}>
