@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 export default function ProductCard({ product, onWishlistChange }) {
@@ -48,12 +49,17 @@ export default function ProductCard({ product, onWishlistChange }) {
   return (
     <article className="product-card">
       <div className="product-image-wrapper">
-        <img 
-          src={product.image} 
-          alt={imageAlt}
-          className="product-image"
-          loading="lazy"
-        />
+        <div className="product-image">
+          <Image
+            src={product.image}
+            alt={imageAlt}
+            width={320}
+            height={320}
+            sizes="(max-width: 768px) 45vw, 280px"
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            loading="lazy"
+          />
+        </div>
         <button 
           className={`wishlist-btn ${isFavorite ? 'active' : ''}`}
           onClick={toggleFavorite}
